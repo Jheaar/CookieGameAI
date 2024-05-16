@@ -1,3 +1,9 @@
+#Colaboradores
+#Sulca Mamani, Iván Frank (UNMSM)
+#Taquire Tenorio, Bryan Héctor (UNMSM)
+#Silvestre Cornejo, Victor Angel (UNMSM)
+#Ochoa Quispe, Arnold Jherico (me)
+
 import pygame
 import sys
 import os
