@@ -243,32 +243,35 @@ def verificar_cuadrado_completo(fila, columna):
                     if cuadrados[f+1][c-1]!='b':
                         cuadrados[f+1][c-1]='v'
                     #Eliminacion de lineas que rodean al cuadrado
-                    if lineas_horizontales[f][c] != '0':
+                    if lineas_horizontales[f][c] != '0' and lineas_horizontales[f][c] != 'b':
                         lineas_horizontales[f][c] = 'v'
-                    if lineas_horizontales[f+1][c] != '0':
+                    if lineas_horizontales[f+1][c] != '0' and lineas_horizontales[f+1][c] != 'b':
                         lineas_horizontales[f+1][c] = 'v'
-                    if lineas_verticales[f][c] != '0':
+
+                    # Corrigiendo las condiciones para lineas_verticales
+                    if lineas_verticales[f][c] != '0' and lineas_verticales[f][c] != 'b':
                         lineas_verticales[f][c] = 'v'
-                    if lineas_verticales[f][c+1] != '0':
+                    if lineas_verticales[f][c+1] != '0' and lineas_verticales[f][c+1] != 'b':
                         lineas_verticales[f][c+1] = 'v'
-                    #Eliminacion de lineas verticales exteriores que rodean al cuadrado
-                    if lineas_verticales[f-1][c+1] != '0':
+                    if lineas_verticales[f-1][c+1] != '0' and lineas_verticales[f-1][c+1] != 'b':
                         lineas_verticales[f-1][c+1] = 'v'
-                    if lineas_verticales[f+1][c+1] != '0':
+                    if lineas_verticales[f+1][c+1] != '0' and lineas_verticales[f+1][c+1] != 'b':
                         lineas_verticales[f+1][c+1] = 'v'
-                    if lineas_verticales[f-1][c] != '0':
+                    if lineas_verticales[f-1][c] != '0' and lineas_verticales[f-1][c] != 'b':
                         lineas_verticales[f-1][c] = 'v'
-                    if lineas_verticales[f+1][c] != '0':
+                    if lineas_verticales[f+1][c] != '0' and lineas_verticales[f+1][c] != 'b':
                         lineas_verticales[f+1][c] = 'v'
-                    #Eliminacion de lineas horizontales exteriores que rodean al cuadrado
-                    if lineas_horizontales[f][c+1] != '0':
+
+                    # Corrigiendo las condiciones para lineas_horizontales exteriores
+                    if lineas_horizontales[f][c+1] != '0' and lineas_horizontales[f][c+1] != 'b':
                         lineas_horizontales[f][c+1] = 'v'
-                    if lineas_horizontales[f][c-1] != '0':
+                    if lineas_horizontales[f][c-1] != '0' and lineas_horizontales[f][c-1] != 'b':
                         lineas_horizontales[f][c-1] = 'v'
-                    if lineas_horizontales[f+1][c+1] != '0':
+                    if lineas_horizontales[f+1][c+1] != '0' and lineas_horizontales[f+1][c+1] != 'b':
                         lineas_horizontales[f+1][c+1] = 'v'
-                    if lineas_horizontales[f+1][c-1] != '0':
+                    if lineas_horizontales[f+1][c-1] != '0' and lineas_horizontales[f+1][c-1] != 'b':
                         lineas_horizontales[f+1][c-1] = 'v'
+
                 elif cuadrados[f][c] == 'ph':
                     if turno == 'Jugador 1':
                         cuadrados[f][c] = '1'
